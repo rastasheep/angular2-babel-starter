@@ -1,0 +1,32 @@
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  padding-top: 60px;
+}
+
+.navbar {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  border-bottom-width: 2px;
+}
+
+.navbar-inner {
+  padding-left: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #f5da55;
+  border-color: #323330;
+  background-image: none;
+}
+
+.navbar-header {
+  line-height:50px;
+  font-size:20px;
+}
