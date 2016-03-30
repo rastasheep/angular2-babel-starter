@@ -1,7 +1,7 @@
 # Build Angular 2 app with Babel
 
-The Bare Bones project is an [Angular 2](https://angular.io/) starter project
-built with [ES2015 aka ES6](https://babeljs.io/docs/learn-es2015/) via
+An [Angular 2](https://angular.io/) starter project
+built with [ECMAScript 2015 aka ES6](https://babeljs.io/docs/learn-es2015/) via
 [Babel](https://babeljs.io/) and [Browserify](http://browserify.org/).
 It has the npm modules, configuration, scripts, folders and routing in place to
 make getting started with an Angular 2 project easy!
@@ -25,11 +25,11 @@ Notes:
 
 ## Running the Application
 
-1. Install [Node.js](http://nodejs.org)
+* Install [Node.js](http://nodejs.org)
 
-2. Run `npm install` to install app dependencies
+* Run `npm install` to install app dependencies
 
-3. Run `npm start` to start the server and launch the app
+* Run `npm start` to start the server and launch the app
 
 ### Preview
 
