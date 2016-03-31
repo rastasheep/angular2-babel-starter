@@ -12,7 +12,7 @@ describe('app', () => {
 
     browser.ignoreSynchronization = true;
     expect(browser.getCurrentUrl())
-      .toEqual('https://github.com/shuhei/babel-angular2-app');
+      .toEqual('https://github.com/rastasheep/angular2-babel-starter');
     browser.ignoreSynchronization = false;
   });
 
