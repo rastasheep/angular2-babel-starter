@@ -1,8 +1,7 @@
-import {Component, provide} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
+import { Component, provide } from 'angular2/core';
+import { RouteParams } from 'angular2/router';
 import {
   AsyncTestCompleter,
-  beforeEach,
   beforeEachProviders,
   describe,
   expect,
@@ -11,8 +10,8 @@ import {
   TestComponentBuilder,
 } from 'angular2/testing_internal';
 
-import {Greeter} from './shared/data.service';
-import {Hello, Ciao, Linker} from './app.component';
+import { Greeter } from './shared/data.service';
+import { Hello, Ciao, Linker } from './app.component';
 
 describe('Hello', () => {
   beforeEachProviders(() => [Greeter]);
@@ -33,7 +32,7 @@ describe('Hello', () => {
 describe('Ciao', () => {
   beforeEachProviders(() => [
     Greeter,
-    provide(RouteParams, { useValue: new RouteParams({ name : 'Babel' }) })
+    provide(RouteParams, { useValue: new RouteParams({ name: 'Babel' }) }),
   ]);
 
   it('renders greeting', inject([TestComponentBuilder, AsyncTestCompleter], (tcb, async) => {
@@ -54,12 +53,14 @@ describe('Linker', () => {
 
   @Component({
     template: '<linker url="http://foo.com" name="Foo"></linker>',
-    directives: [Linker]
+    directives: [Linker],
   })
   class Parent {}
 
-  it('renders a link with given attributes', inject([TestComponentBuilder, AsyncTestCompleter], (tcb, async) => {
-    tcb.createAsync(Parent)
+  it('renders a link with given attributes',
+    inject([TestComponentBuilder, AsyncTestCompleter],
+    (tcb, async) => {
+      tcb.createAsync(Parent)
       .then((fixture) => {
         fixture.detectChanges();
 
@@ -75,5 +76,5 @@ describe('Linker', () => {
         async.done();
       })
       .catch((e) => console.error(e));
-  }));
+    }));
 });

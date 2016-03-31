@@ -8,6 +8,21 @@
     "jasmine": true
   },
   "ecmaFeatures": {
-    "modules": true
-  }
+    "modules": true,
+  },
+  "rules": {
+    "new-cap": [2, { "capIsNewExceptions": [
+      "Component",
+      "View",
+      "RouteConfig",
+      "Input"
+    ]}]
+  },
+  "globals": {
+    "browser": true,
+    "should": true,
+    "Q": true,
+    "by": true,
+    "element": true
+  },
 }

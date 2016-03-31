@@ -1,14 +1,10 @@
 import {
-  AsyncTestCompleter,
-  beforeEach,
   describe,
   expect,
-  inject,
   it,
-  TestComponentBuilder,
 } from 'angular2/testing_internal';
 
-import {Greeter} from './data.service';
+import { Greeter } from './data.service';
 
 describe('Greeter', () => {
   describe('#say', () => {

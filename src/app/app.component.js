@@ -1,11 +1,11 @@
-import {Component, View, Input} from 'angular2/core';
-import {RouteConfig, RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
+import { Component, View, Input } from 'angular2/core';
+import { RouteConfig, RouteParams, ROUTER_DIRECTIVES } from 'angular2/router';
 
-import {Greeter} from './shared/data.service';
+import { Greeter } from './shared/data.service';
 
 @Component({
   selector: 'hello',
-  template: '<p>{{ message }}</p>'
+  template: '<p>{{ message }}</p>',
 })
 export class Hello {
   constructor(greeter: Greeter) {
@@ -15,7 +15,7 @@ export class Hello {
 
 @Component({
   selector: 'ciao',
-  template: '<p>{{ message }}</p>'
+  template: '<p>{{ message }}</p>',
 })
 export class Ciao {
   constructor(greeter: Greeter, routeParams: RouteParams) {
@@ -25,7 +25,7 @@ export class Ciao {
 
 @Component({
   selector: 'linker',
-  template: '<p><a [href]="url" [title]="name">{{ name }}</a></p>'
+  template: '<p><a [href]="url" [title]="name">{{ name }}</a></p>',
 })
 export class Linker {
   @Input() name;
@@ -34,7 +34,7 @@ export class Linker {
 
 @Component({
   selector: 'hello-app',
-  viewProviders: [Greeter]
+  viewProviders: [Greeter],
 })
 @View({
   directives: [ROUTER_DIRECTIVES, Linker],
@@ -46,11 +46,11 @@ export class Linker {
     <router-outlet></router-outlet>
     Find me at:
     <linker name="GitHub" url="https://github.com/rastasheep/angular2-babel-starter"></linker>
-  `
+  `,
 })
 @RouteConfig([
   { path: '/', component: Hello, name: 'Hello' },
-  { path: '/ciao/:name', component: Ciao, name: 'Ciao' }
+  { path: '/ciao/:name', component: Ciao, name: 'Ciao' },
 ])
 export class HelloApp {
 }
