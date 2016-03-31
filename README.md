@@ -17,6 +17,7 @@ Here's what is in the project:
 * Routing between the homepage and the "feature"
 * Bootstrap for CSS and basic asset setup
 * live-server used to launch the site and reload it as you make changes
+* Linting powered by [ESLint](http://eslint.org/) with included [Airbnb Style Guide](https://github.com/airbnb/javascript)
 
 Notes:
 * Supports class/parameter decorators and parameter type annotations with [babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy) and [babel-plugin-angular2-annotations](https://github.com/shuhei/babel-plugin-angular2-annotations)
@@ -37,6 +38,7 @@ Notes:
 
 ## Testing
 
+* Run linter `npm run lint --silent`
 * Run all tests `npm test`
 * Run only unit tests `npm run unit`
 * Run only end-to-end tests `npm run e2e`

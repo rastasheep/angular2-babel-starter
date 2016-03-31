@@ -11,14 +11,15 @@
     "test": "npm run unit && npm run e2e",
     "unit": "karma start --single-run",
     "tdd": "karma start",
-    "e2e": "npm run build && protractor"
+    "e2e": "npm run build && protractor",
+    "lint": "eslint src/ test/ --ext .js"
   },
   "author": "Aleksandar Diklic <rastasheep@gmail.com>",
   "repository": "rastasheep/angular2-babel-starter",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "6.6.4",
-    "babel-eslint": "^5.0.0-beta6",
+    "babel-eslint": "^6.0.0",
     "babel-plugin-angular2-annotations": "^5.0.0",
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.3",
@@ -28,6 +29,10 @@
     "babylon": "6.6.4",
     "browserify": "^13.0.0",
     "del": "^2.2.0",
+    "eslint": "^2.5.3",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-jasmine": "^1.7.0",
+    "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-util": "^3.0.7",
