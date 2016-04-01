@@ -34,6 +34,7 @@ export class Linker {
 
 @Component({
   selector: 'hello-app',
+  providers: [Greeter],
   directives: [ROUTER_DIRECTIVES, Linker],
   template: `
     <ul>

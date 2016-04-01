@@ -15,7 +15,8 @@
       "Component",
       "View",
       "RouteConfig",
-      "Input"
+      "Input",
+      "Injectable"
     ]}]
   },
   "globals": {

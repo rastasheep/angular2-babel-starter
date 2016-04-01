@@ -1,3 +1,6 @@
+import { Injectable } from 'angular2/core';
+
+@Injectable()
 export class Greeter {
   say(greeting, name) {
     const capitalized = this._capitalize(greeting);
