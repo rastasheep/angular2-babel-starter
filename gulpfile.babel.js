@@ -15,7 +15,8 @@ var paths = {
   index: 'src/index.html',
   scripts: 'src/app/**/*.js',
   images: 'src/images/**/*',
-  styles: 'src/styles/**/*'
+  styles: 'src/styles/**/*',
+  templates: 'src/app/**/*.html'
 };
 
 gulp.task('copy', () => {
@@ -27,6 +28,10 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('public'));
 });
 
+gulp.task('templates', () => {
+  return gulp.src([paths.templates]).pipe(gulp.dest('public/app'));
+});
+
 gulp.task('images', () => {
   return gulp.src([paths.images]).pipe(gulp.dest('public/images'));
 });
@@ -35,7 +40,7 @@ gulp.task('styles', () => {
   return gulp.src([paths.styles]).pipe(gulp.dest('public/styles'));
 });
 
-gulp.task('build', ['copy', 'images', 'styles'], () => {
+gulp.task('build', ['copy', 'images', 'styles', 'templates'], () => {
   const b = browserify('src/app/index.js', { debug: true })
     .transform(babelify);
   return bundle(b);
@@ -54,7 +59,7 @@ gulp.task('clean', () => {
   return del('public');
 });
 
-gulp.task('default', ['build', 'copy', 'watch']);
+gulp.task('default', ['clean', 'build', 'watch']);
 
 function bundle(b) {
   return b.bundle()

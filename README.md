@@ -32,10 +32,6 @@ Notes:
 
 * Run `npm start` to start the server and launch the app
 
-### Preview
-
-* Serve static files from `public` directory `cd public && python -m SimpleHTTPServer 8000`
-
 ## Testing
 
 * Run linter `npm run lint --silent`
