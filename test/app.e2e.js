@@ -8,11 +8,20 @@ describe('app', () => {
   });
 
   it('shows a link to the GitHub repo', () => {
-    element(by.linkText('GitHub')).click();
+    element(by.linkText('rastasheep/angular2-babel-starter')).click();
 
     browser.ignoreSynchronization = true;
     expect(browser.getCurrentUrl())
       .toEqual('https://github.com/rastasheep/angular2-babel-starter');
+    browser.ignoreSynchronization = false;
+  });
+
+  it('shows a link to the twitter profile', () => {
+    element(by.linkText('rastasheep')).click();
+
+    browser.ignoreSynchronization = true;
+    expect(browser.getCurrentUrl())
+      .toEqual('https://twitter.com/lesa_ns');
     browser.ignoreSynchronization = false;
   });
 
@@ -21,8 +30,8 @@ describe('app', () => {
     expect(browser.getCurrentUrl()).not.toMatch(/#/);
 
     element(by.linkText('Ciao')).click();
-    expect(element(by.css('ciao')).getText()).toEqual('Ciao, ng2!');
-    expect(browser.getCurrentUrl()).toMatch(/\/#\/ciao\/ng2$/);
+    expect(element(by.css('ciao')).getText()).toEqual('Ciao, bella!');
+    expect(browser.getCurrentUrl()).toMatch(/\/#\/ciao\/bella$/);
 
     element(by.linkText('Hello')).click();
     expect(element(by.css('hello')).getText()).toEqual('Hello, Angular 2!');
