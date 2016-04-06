@@ -22,6 +22,6 @@ describe('Hello', () => {
         expect(fixture.debugElement.nativeElement).toHaveText('Hello, Angular 2!');
 
         async.done();
-      })
+      });
   }));
 });

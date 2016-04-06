@@ -38,6 +38,6 @@ describe('Linker', () => {
         expect(anchor).toHaveText('Foo');
 
         async.done();
-      })
+      });
     }));
 });

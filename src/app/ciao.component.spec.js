@@ -27,7 +27,7 @@ describe('Ciao', () => {
         expect(fixture.debugElement.nativeElement).toHaveText('Ciao, Babel!');
 
         async.done();
-      })
+      });
   }));
 });
 
